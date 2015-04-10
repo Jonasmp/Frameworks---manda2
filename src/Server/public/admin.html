@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="Main">
+
+  <head>
+    <meta charset="utf-8" />
+    <link data-require="bootstrap@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <!-- <script data-require="bootstrap@*" data-semver="3.3.1" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
+    <link href="style/shop.css" rel="stylesheet" type="text/css" />
+    <!--<script data-require="angular.js@*" data-semver="1.4.0-beta.2" src="https://code.angularjs.org/1.4.0-beta.2/angular.js"></script> -->
+    <title>Milkshop</title>
+  </head>
+
+  <body>
+
+<div>
+	<h1>Admin Panel</h1>
+      <div ng-controller="adminController">
+		<div class="admin-site">
+			<h4>Update product:</h4>
+			<form>
+
+				<label for="id">ID:</label>
+				<input type="text" id="id" ng-model="product.id" />
+
+				<label for="name">Product Name:</label>
+				<input type="text" id="name" ng-model="product.name" />
+
+				<label for="price">Price:</label>
+				<input type="text" id="price" ng-model="product.price" />
+
+				<label for="category">Category:</label>
+				<input type="text" id="category" ng-model="product.category" />
+
+				<label for="image">Image:</label>
+				<input type="text" id="image" ng-model="product.img" />
+
+				<button class="btn btn-default confirm" type="submit" ng-click="createProduct(product)">Create Product</button>	
+			</form>
+		</div>
+	</div>
+</div>
+
+ <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.min.js"></script>
+    <script src="app.module.js"></script>
+    
+    <script src="cart/cart.service.js"></script>
+    <script src="products/products.service.js"></script>
+
+    <script src="cart/cart.controller.js"></script>
+    <script src="products/admin.controller.js"></script>
+    <script src="products/products.controller.js"></script>
+    <script src="products/product.controller.js"></script>
+  </body>
+
+</html>   

@@ -1,0 +1,21 @@
+<div ng-controller="adminController">	
+		
+		<div class="admin-site">
+			
+			<form>
+				<label for="name">Product Name:</label>
+				<input type="text" id="name" ng-model="product.name" />
+
+				<label for="price">Price:</label>
+				<input type="text" id="price" ng-model="product.price" />
+
+				<label for="category">Category:</label>
+				<input type="text" id="category" ng-model="product.category" />
+
+				<label for="image">Image:</label>
+				<input type="text" id="image" ng-model="product.img" />
+
+				<button class="btn btn-default confirm" type="submit" ng-click="updateProduct(product._id)">Update Product</button>
+			</form>
+		</div>
+	</div>
